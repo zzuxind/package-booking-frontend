@@ -1,20 +1,21 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
-
+const url="http://localhost:9000/packages"
 Vue.use(Vuex)
-const url="";
 export default new Vuex.Store({
   state: {
-
+    packageList:[]
   },
   mutations: {
-
+    setPackageList(state,data){
+      state.packageList=data
+    }
   },
   actions: {
     
     addPackage(context,values){
-      const url="http://localhost:9000/packages"
+      
       console.log(15,values)
       axios.post(url,values)
            .then(function(response){
@@ -22,6 +23,16 @@ export default new Vuex.Store({
             }).catch(function(error){
            console.log(error.response);
             })
+    },
+    getPackageInfos(context){
+      axios.get(url).then(
+        function(response){
+            console.log("29",response.data)
+            context.commit('setPackageList',response.data)
+        }).catch(
+        function(error){
+            console.log(error)
+    });    
     }
   }
 })

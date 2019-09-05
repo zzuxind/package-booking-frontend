@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import AddPackage from './components/AddPackage'
+import PackageList from './components/PackageList'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/addpackage',
       name: 'addpackage',
       component: AddPackage
+    },
+    {
+      path: '/packagelist',
+      name: 'packagelist',
+      component: PackageList
     }
   ]
 })
