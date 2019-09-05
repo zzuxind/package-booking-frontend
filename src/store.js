@@ -12,7 +12,9 @@ export default new Vuex.Store({
 
   },
   actions: {
+    
     addPackage(context,values){
+      const url="http://localhost:9000/packages"
       console.log(15,values)
       axios.post(url,values)
            .then(function(response){

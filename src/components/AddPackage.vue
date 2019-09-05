@@ -1,11 +1,11 @@
 <template>
   <a-form :form="form"  @submit="handleSubmit">
-    <a-form-item label="orderNumber" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
-      <a-input v-decorator="['orderNumber', {rules: [{ required: true, message: '请输入运单号!' }]}]"/>
+    <a-form-item label="ordernumber" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
+      <a-input v-decorator="['ordernumber', {rules: [{ required: true, message: '请输入运单号!' }]}]"/>
     </a-form-item>
 
-    <a-form-item label="Receiver" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
-      <a-input v-decorator="['Receiver', {rules: [{ required: true, message: '请输入收件人!' }]}]"/>
+    <a-form-item label="receiver" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
+      <a-input v-decorator="['receiver', {rules: [{ required: true, message: '请输入收件人!' }]}]"/>
     </a-form-item>
 
     <a-form-item label="telephone" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
